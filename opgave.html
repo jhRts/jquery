@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Opgave</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Johan Hallager / JH">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link href="assets/css/app.css" rel="stylesheet">
+    <style>
+        table tbody tr td:first-child {
+            min-width: 150px;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div id="menu" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="brand" href="./index.html">Bootstrap</a>-->
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="">
+                            <a href="./index.html">1. Indledning</a>
+                        </li>
+                        <li class="">
+                            <a href="./start.html">2. Start</a>
+                        </li>
+                        <li class="">
+                            <a href="./events.html">3. Evenst</a>
+                        </li>
+                        <li class="">
+                            <a href="./method.html">4. Metoder</a>
+                        </li>
+                        <!--
+            <li class="active">
+                <a href="traversing.html">traversing *</a>
+            </li>
+                -->
+                        <li class="active">
+                            <a href="./opgave.html">5. Opgave</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subhead
+    ================================================== -->
+    <header class="jumbotron subhead" id="overview">
+        <div class="container">
+            <h1 id="title-name">Opgave</h1>
+        </div>
+    </header>
+
+
+    <div class="container">
+
+        <!-- Docs nav
+        ================================================== -->
+        <div class="row">
+            <div class="span3 bs-docs-sidebar">
+                <ul class="nav nav-list bs-docs-sidenav">
+                    <!--    <li class="active"><a href="#indledning"><i class="icon-chevron-right"></i>Indledning</a></li>
+                    <li><a href="#file-structure"><i class="icon-chevron-right"></i> File structure</a></li>
+                    <li><a href="#contents"><i class="icon-chevron-right"></i> What's included</a></li>
+                    <li><a href="#html-template"><i class="icon-chevron-right"></i> HTML template</a></li>
+                    <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
+                    <li><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li>-->
+                </ul>
+            </div>
+            <div class="span9">
+
+                <!--
+
+                        manipulation
+                        1. opgave/side/afsnit
+                              
+                        2. opgave/side/afsnit
+                                - en opgave der viser hvordan man arbejder med jquery.
+                                a. 
+                                    each()
+                                    appendTo()
+                                b. - vis ikke alle elm med css. en variabel med tal som teller op. each på elm og add tal op i fadeIn. de fader ind, en efter en.
+                                    - http://codepen.io/jhCMK/pen/DrqFf
+                                    each()
+                                    fadeIn()
+
+
+                -->
+               <!-- <section>
+                    <div class="page-header">
+                        <h1>intro?? *</h1>
+                        <p class="lead">
+
+                        </p>
+                    </div>
+                </section>
+                -->
+             
+
+                <section id="FadeIn-med-forsinkelse">
+                    <div class="page-header">
+                        <h1>FadeIn med forsinkelse</h1>
+                        <p class="lead">
+                            Opgave
+                        </p>
+                    </div>
+                    <p>
+                        Du skal lave en lille manipulering af flere elementer, du får kun lidt css og den html du skal bruge.
+                    </p>
+                    <p>
+                        Du skal så kode jQueryen selv, men du får noget hjælp.
+                    </p>
+                    <!-- codePin -->
+                    <p data-height="250" data-theme-id="0" data-slug-hash="DrqFf" data-default-tab="html" class='codepen'>See the Pen <a href='http://codepen.io/jhCMK/pen/DrqFf'>jquery manipulation each() +  fadeIn() + tid</a> by Johan Plesner Hallager (<a href='http://codepen.io/jhCMK'>@jhCMK</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+                    <!-- end codePin -->
+
+                    <ol>
+                        <li>Lav et klik event på <code>button</code> med id vis.</li>
+                        <li>Inden i klik eventet skal du lave en <code>each()</code> på <code>p</code> tagne.</li>
+                        <li>Inden i <code>each()</code> skal du så lave en <code>fadeIn()</code> på <code>this</code>.</li>
+                    </ol>
+                    <p>Du kan nu se at alle elementerne bliver vist samtidige, det kan vi lave om på ved at skrive lidt mere kode.</p>
+                    <ol start="4">
+                        <li>Lav helt øverst (linje.nr 1) en variabel der har en værdi af 500.</li>
+                        <li>Skriv variablen inden i <code>fadeIn(<span class="text-error">variabel</span>)</code>, nu vil de fade ind lidt langsommere.</li>
+                        <li>Til slut i <code>each()</code> metoden, skal du lægge 300 til variabelen.</li>
+                    </ol>
+                    <p>Du vil nu få vist et <code>p</code> tag af gangen med 300 millisekunder efter hinanden.</p>
+
+                    <!--
+                        // løsning
+
+            var tid = 500;
+            $("#vis").on("click", function(){
+              $("p").each(function(){
+                $(this).fadeIn(tid);
+                tid+=300;
+              });
+            })
+
+        -->
+
+                </section>
+
+                <section id="tryJQ">
+                    <div class="page-header">
+                        <h1>Har du tid?</h1>
+                        <p class="lead"><a href="http://try.jquery.com">try.jquery.com</a></p>
+                    </div>
+                </section>
+
+                    <!--a class="toTop btn btn-info ">Gå til næste side <i class="icon-forward icon-white"></i></a-->
+
+</div>
+        </div>
+
+    </div>
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+            <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        </div>
+    </footer>
+
+    <div>
+        <!--  <a href="#myModal" role="button" class="btn" data-toggle="modal">TODO`S</a>
+
+
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">TODO´S</h3>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>-->
+
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script async src="http://codepen.io/assets/embed/ei.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/application.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script type="text/javascript">
+        tl.staggerFrom("#title-name span", 0.8, { left: 200, ease: Back.easeOut }, 0.06, "go").to("#logo", 0.8, { width: "50%", height: "50%", top: -50, left: "50%", ease: Back.easeOut }, "go+=0.35")
+        //.to(".subhead", 0.8, { height: 168 }, "-=0.3")
+        ;
+
+    </script>
+</body>
+</html>

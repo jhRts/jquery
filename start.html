@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Kom godt i gang med</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Johan Hallager / JH">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link href="assets/css/app.css" rel="stylesheet">
+    <style>
+        table tbody tr td:first-child {
+            min-width: 150px;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div id="menu" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="brand" href="./index.html">Bootstrap</a>-->
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="">
+                            <a href="./index.html">1. Indledning</a>
+                        </li>
+                        <li class="active">
+                            <a href="./start.html">2. Start</a>
+                        </li>
+                        <li class="">
+                            <a href="./events.html">3. Evenst</a>
+                        </li>
+                        <li class="">
+                            <a href="./method.html">4. Metoder</a>
+                        </li>
+                        <!--
+            <li class="active">
+                <a href="traversing.html">traversing *</a>
+            </li>
+                -->
+                        <li class="">
+                            <a href="./opgave.html">5. Opgave</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subhead
+    ================================================== -->
+    <header class="jumbotron subhead" id="overview">
+        <div class="container">
+            <h1 id="title-name">Hvordan virker </h1>
+            <img id="logo" src="assets/doc/billeder/logo/jquery.small.png" />
+
+        </div>
+    </header>
+
+
+    <div class="container">
+
+        <!-- Docs nav
+        ================================================== -->
+        <div class="row">
+            <div class="span3 bs-docs-sidebar">
+                <ul class="nav nav-list bs-docs-sidenav">
+                    <!--    <li class="active"><a href="#indledning"><i class="icon-chevron-right"></i>Indledning</a></li>
+                    <li><a href="#file-structure"><i class="icon-chevron-right"></i> File structure</a></li>
+                    <li><a href="#contents"><i class="icon-chevron-right"></i> What's included</a></li>
+                    <li><a href="#html-template"><i class="icon-chevron-right"></i> HTML template</a></li>
+                    <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
+                    <li><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li>-->
+                </ul>
+            </div>
+            <div class="span9">
+
+
+
+
+                <!-- ContentsIndledning
+                ================================================== -->
+                <!--        <section id="deom01">
+                                    <div class="page-header">
+                                        <h1>0. Prøv selv / spring ud i det</h1>
+                                    </div>
+                                    <p class="lead">
+                                        En god måde hvorpå at komme igang med noget nyt er at springe ud i det.
+                                    </p>
+                                    <h2>Midlertidigt  struktur</h2>
+                                        <div class="row">
+                                            <div class="span5">
+                                                <pre class="prettyprint">&lt;html&gt;
+                    &lt;head&gt;&lt;/head&gt;
+                    &lt;body&gt;
+                        ... html tags her ...
+
+                        &lt;script&gt;
+                            ... javascript her ...
+                        &lt;/script&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;
+                </pre>
+
+                                            </div>
+                                            <div class="span4">
+                                                Vi bruger en midlertidigt struktur til at teste, der efter når du når til opgaverne så skal det laves korrekt.
+                                            </div>
+                                        </div>
+
+
+                                    <p>
+                                        Her ser du en jQuery metode, denne stump kode kan skrive til et HTML ellement.
+                                        Dette sker ved at jQuery finder frem til et ellement og med <code>.html()</code> metoden udskiftes indholdet.
+                                        <pre class="prettyprint"> $("#myDiv").html("tekst her")</pre>
+                                    </p>
+                                    <p class="text-left">Du kan se forneden noget kode der gør lige præcis dette.</p>
+
+                                    <div class="row">
+                                        <div class="span7">
+                                            <div class="codePinLineNr">
+                                                <pre id="EnAFw" class="codepen" data-height="400" data-type="html" data-href="EnAFw" data-user="jhRts" data-safe="true"><code>&lt;!DOCTYPE html&gt;
+                &lt;html lang=&quot;en&quot;&gt;
+                &lt;head&gt;
+                    &lt;title&gt;jQuery demo 1&lt;/title&gt;
+                    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;div id=&quot;myDiv&quot;&gt;&lt;/div&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;http://code.jquery.com/jquery-2.0.2.min.js&quot;&gt;&lt;/script&gt;
+                    &lt;script&gt;
+                        $(&quot;#myDiv&quot;).html(&quot;Dette er fra jQuery&quot;);
+                    &lt;/script&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;</code><a href="http://codepen.io/jhRts/pen/EnAFw">Check out this Pen!</a></pre>
+                                            </div>
+                                        </div>
+                                        <div class="span2">
+                                            <p><i class="icon-arrow-left"></i>Tryk på <code>Edit on CodePen </code>, og prøv det af. </p>
+                                        </div>
+                                    </div>
+                                    <p>Du kan også lave dig et nyt html dokument og kopier koden over.</p>
+
+                                    <h4>En kort forklaring til koden.</h4>
+                                    <p>
+                                        Det der sker i denne demo
+                                        er at jquery finder frem til en div med et id af myDiv og derefter skifter den indholdet ud med det der står inden i <code>.html()</code> metoden.
+                                    </p>
+                                    <ul class="unstyled data-pre">
+                                        <li><strong>linje.8</strong>&nbsp;<span>Et tomt element som der bliver skrives til.</span></li>
+                                        <li><strong>linje.9</strong>&nbsp;<span>Her bliver jquery hentet ind.</span></li>
+                                        <li><strong>linje.11</strong>&nbsp;<span>Her bliver div ellementet manipuleret med.</span></li>
+                                    </ul>
+
+                                    <p>
+                                        Denne metode kan være meget nyttig i mange sammenhæng.
+                                        Du kan også skrive HTML inden i parenteserne som vist her.
+                                        <pre class="prettyprint"> $("#myDiv").html("&lt;h2&gt;Dette er en h2&lt;/h2&gt;")</pre>
+                                        Prøv dig lidt frem og husk dobbel-plinger <code>&quot;&quot;</code> ellers virker det ikke.
+                                    </p>
+
+
+                                </section>
+                                -->
+                <!-- Indledning
+                ================================================== -->
+
+                <section id="jQuery_syntaks">
+                    <div class="page-header">
+                        <h1>jQuery syntaks</h1>
+                    </div>
+                    <p class="lead">
+                        En større del af hvad der gør jQuery smart, er dens syntaks.
+                    </p>
+
+                    <h2>Overblik</h2>
+                    <h4>Før vi går i dybden, skal der ses på det grundlæggende af hvordan jQuery typisk kan se ud.</h4>
+                    <p>
+                        Groft sagt så kan man dele jquery op i nogle få dele, når man skal lave noget simpelt. Senere hen kommer det til at se lidt mere avenceret ud.
+                    </p>
+                    <div class="row">
+                        <div class="span8 well">
+                            <h3 class="text-center"><span class="text-warning">$</span><span class="text-success">(vælgeren)</span><span class="text-info">.metode(</span><span>argument</span><span class="text-info">)</span></h3>
+                            <dl class="dl-horizontal">
+                                <dt class="text-warning">$</dt>
+                                <dd>Dollartegn er en forkortelse for jQuery, så du kan enten skrive <code>jQuery</code> eller <code>$</code></dd>
+                                <dt class="text-success">(vælgeren)</dt>
+                                <dd>Her finder vi frem til hvilken ellemet der skal behandles. Det er typisk ved at skrive CSS selectors.</dd>
+                                <dt class="text-info">.metode()</dt>
+                                <dd>Hvilken metode skal udføres.</dd>
+                                <dt>argument</dt>
+                                <dd>Argumenter skal sendes med.</dd>
+
+                            </dl>
+                        </div>
+                    </div>
+                    <h4>Øvelse</h4>
+                    <p>
+                        Lad os så prøve at farve noget tekst ved at skifte selectoren ud. Prøv med disse html tags
+                        <code>a</code>, <code>p</code>, <code>h2</code>. Der er lidt kode her på codepen du kan arbejde med.
+                        igen kan du kopiere koden ind i en fil og prøve derfra.
+                    </p>
+                    <p>
+                        Find frem til linje 25 og skriv inden i dobbel-plingerne <code>&quot;&quot;</code>. fx. <code>$(&quot;h2&quot;)</code>.
+                        <br />
+                        Hvis der er andet CSS du har lyst til at prøve af så er du velkommen.
+                    </p>
+                    <p class="text-right">
+                        Du kan se en demo her <a href="#modal-start-overblik" role="button" class="btn btn-small" data-toggle="modal">Se demo</a>, den vare ca. 6 sek.
+                    </p>
+
+                    <div id="modal-start-overblik" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3>Kode demo</h3>
+                        </div>
+                        <div class="modal-body">
+                            <img src="assets/doc/opgaver/start-jQuery_syntaks-overblik/oevelse.gif" />
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true"><i class="icon-off"></i>Luk</button>
+                        </div>
+                    </div>
+
+
+                    <pre class="codepen" data-height="600" data-type="html" data-href="yJDtr" data-user="jhRts" data-safe="true"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;jQuery demo 1&lt;/title&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+  &lt;h2&gt;Lorem ipsum&lt;/h2&gt;
+  &lt;p&gt;
+    dolor sit &lt;a href=&quot;#&quot;&gt;amet&lt;/a&gt;, consectetur.
+  &lt;/p&gt;
+  &lt;p&gt;
+    Adipiscing elit fusce &lt;a href=&quot;#&quot;&gt;vel&lt;/a&gt; sapien elit.
+  &lt;/p&gt;
+  &lt;p&gt;
+    In &lt;a href=&quot;#&quot;&gt;malesuada&lt;/a&gt; semper mi, id sollicitudin.
+  &lt;/p&gt;
+  &lt;p&gt;
+    Urna fermentum ut fusce varius nisl.
+  &lt;/p&gt;
+  
+    &lt;script type=&quot;text/javascript&quot; src=&quot;http://code.jquery.com/jquery-2.0.2.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+       $(&quot;&quot;).css(&quot;background-color&quot;, &quot;red&quot;)
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code><a href="http://codepen.io/jhRts/pen/yJDtr">Check out this Pen!</a></pre>
+                    <script async src="http://codepen.io/assets/embed/ei.js"></script>
+
+
+                </section>
+                <section id="Selectoren">
+                    <div class="page-header">
+                        <h1>Selectoren </h1>
+                    </div>
+                    <blockquote>
+                        <p>Første del af selector, dette kommer til at handle om CSS selector</p>
+                    </blockquote>
+
+                    <p>
+                        Der skal nu ses lidt mere på hvordan man vælger ellementer blandt HTMLen<br />
+                        Det er bygget op således at man kan vælger ellementer ved at skrive noget der er meget ens med CSS selector metoderne
+                    </p>
+                    <div class="row">
+                        <div class="span4">
+                            <h4>CSS</h4>
+                            <pre class="prettyprint linenums">
+#myDiv{
+     background-color:red;
+}
+</pre>
+                        </div>
+                        <div class="span4">
+                            <h4>jQuery</h4>
+                            <pre class="prettyprint linenums">$(&quot;#myDiv&quot;)</pre>
+                        </div>
+                    </div>
+                    <p>
+                        Forneden bliver der vist nogle eksempler på hvordan man man kan vælge ellementer blandt HTML
+
+                    </p>
+
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <td>selector</td>
+                                <td>eksempel</td>
+                                <td>beskrivelse</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>#</strong></td>
+                                <td>
+                                    <code>&lt;div <span class="text-success">id=&quot;myDiv&quot;</span>&gt;&lt;/div&gt;</code>
+                                </td>
+                                <td>vælge et ellement fra siden</td>
+                            </tr>
+                            <tr>
+                                <td><strong>.</strong></td>
+                                <td>
+                                    <code>&lt;span <span class="text-success">class=&quot;hund&quot;</span>&gt;&lt;/span&gt;</code><br />
+                                    <code>&lt;span <span class="text-success">class=&quot;hund&quot;</span>&gt;&lt;/span&gt;</code>
+                                </td>
+                                <td>vælge alle ellementer med den samme class </td>
+                            </tr>
+                            <tr>
+                                <td>p</td>
+                                <td>
+                                    <code>&lt;<span class="text-success">p</span>&gt;&lt;/p&gt;</code><br />
+                                    <code>&lt;<span class="text-success">p</span>&gt;&lt;/p&gt;</code>
+                                </td>
+                                <td>vælge alle elementer af typen p</td>
+                            </tr>
+                            <tr>
+                                <td>#myDiv .hund</td>
+                                <td>
+                                    <code>
+                                        &lt;div id=&quot;myDiv&quot;&gt;
+                                        <br />
+                                        <span class="text-success">&lt;div class=&quot;hund&quot;&gt;&lt;/div&gt;</span><br />
+                                        <span class="text-success">&lt;div class=&quot;hund&quot;&gt;&lt;/div&gt;</span><br />
+                                        &lt;/div&gt;
+                                    </code>
+                                </td>
+                                <td>vælge alle ellementer med class af hund, som er inden i et andet ellement med id af myDiv </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <h4>Øvelse</h4>
+                    <p>
+                        Der skal nu ses på hvordan man kan vælge en til flere ellementer i et HTML dokument.
+
+                        For at kunne vælge mere en et ellement af gangen, kan du skrive et komma <code>,</code>.
+                        Fx. hvis du har valgt et ellement med et span tag i et p tag / <code>$("p span")</code>,
+                        her vil du moske få kun et element tilbage, eller alle span tags som er i et p tag,
+                        "alt efter omstændighederne". Du kan også vælge begge tags hver for sig, <code>$("p, span")</code>,
+                        her vil du så have valgt alle span tags og alle p tags.
+                    </p>
+                    <p>
+                        Her er lidt kode du kan arbejde med.
+                        I denne kode er der nogle p tags med nogle span tags i, der er skrevet lidt jQuery som skal fange de tags du vælger, derefter bliver der skrevet i en h2ér, hvor mange tags der er valgt.
+                        <br />
+                        <span class="label label-important">
+                            <i class="icon-check icon-white"></i>
+                            Opgaven er at få fat i præcis 14 ellementer ved at udskifte se lighteren på linje.39.
+                        </span>
+                        Spørg din lærer hvis du bliver i tvivl.
+                    </p>
+                    <div class="codePinLineNr">
+                        <div data-height="906" data-theme-id="0" data-slug-hash="xJbdi" data-user="jhRts" data-default-tab="html" class='codepen'>
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;jQuery demo 3&lt;&#x2F;title&gt;
+    &lt;meta charset=&quot;UTF-8&quot; &#x2F;&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+        
+  &lt;h2 class=&quot;antal&quot;&gt;&lt;&#x2F;h2&gt;
+    &lt;div class=&quot;beholder&quot;&gt;
+        &lt;p&gt;
+            Lorem ipsum &lt;span&gt;dolor&lt;&#x2F;span&gt; sit amet.
+        &lt;&#x2F;p&gt;
+        &lt;p&gt;
+            Consectetur &lt;span&gt;adipiscing&lt;&#x2F;span&gt; elit fusce vel.
+        &lt;&#x2F;p&gt;
+        &lt;p&gt;
+            Sapien elit in malesuada semper.
+        &lt;&#x2F;p&gt;
+        &lt;p&gt;
+            Mi, &lt;span&gt;id&lt;&#x2F;span&gt; sollicitudin urna fermentum.
+        &lt;&#x2F;p&gt;
+        &lt;p&gt;
+            Ut fusce varius &lt;span&gt;nisl&lt;&#x2F;span&gt; ac.
+        &lt;&#x2F;p&gt;
+        &lt;p&gt;
+            &lt;span&gt;Ipsum&lt;&#x2F;span&gt; gravida vel pretium tellus.
+        &lt;&#x2F;p&gt;
+    &lt;&#x2F;div&gt;
+    &lt;p&gt;
+        Ut fusce varius &lt;span&gt;nisl&lt;&#x2F;span&gt; ac.
+    &lt;&#x2F;p&gt;
+    &lt;p&gt;
+        &lt;span&gt;Ipsum&lt;&#x2F;span&gt; gravida vel &lt;span&gt;Ipsum&lt;&#x2F;span&gt; pretium tellus.
+    &lt;&#x2F;p&gt;
+        &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;http:&#x2F;&#x2F;code.jquery.com&#x2F;jquery-2.0.2.min.js&quot;&gt;&lt;&#x2F;script&gt;
+    &lt;script&gt;
+        var items = $(&quot;&quot;);
+        $(&quot;.antal&quot;).text( items.length );
+    &lt;&#x2F;script&gt;
+&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;</code></pre>
+                            <p>See the Pen <a href='http://codepen.io/jhRts/pen/xJbdi'>%= penName %></a> by Johan Hallager (<a href='http://codepen.io/jhRts'>@jhRts</a>) on <a href='http://codepen.io'>CodePen</a></p>
+                        </div>
+                    </div>
+
+
+
+
+                </section>
+
+                <a class="toTop btn btn-info ">Gå til næste side <i class="icon-forward icon-white"></i></a>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+            <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        </div>
+    </footer>
+
+    <div>
+        <!--  <a href="#myModal" role="button" class="btn" data-toggle="modal">TODO`S</a>
+
+
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">TODO´S</h3>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>-->
+
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script async src="http://codepen.io/assets/embed/ei.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/application.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script type="text/javascript">
+        tl.staggerFrom("#title-name span", 0.8, { left: 200, ease: Back.easeOut }, 0.06, "go").to("#logo", 0.8, { width: "50%", height: "50%", top: -50, left: "50%", ease: Back.easeOut }, "go+=0.35")
+        //.to(".subhead", 0.8, { height: 168 }, "-=0.3")
+        ;
+
+    </script>
+</body>
+</html>

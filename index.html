@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Kom godt i gang med</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Johan Hallager / JH">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link href="assets/css/app.css" rel="stylesheet">
+    <style>
+        /* Kun til forsiden */
+        .bs-docs-sidenav.affix
+        {
+            top: 258px;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div id="menu"  class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="brand" href="./index.html">Bootstrap</a>-->
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="./index.html">1. Indledning</a>
+                        </li>
+                        <li class="">
+                            <a href="./start.html">2. Start</a>
+                        </li>
+                        <li class="">
+                            <a href="./events.html">3. Evenst</a>
+                        </li>
+                        <li class="">
+                            <a href="./method.html">4. Metoder</a>
+                        </li>
+                        <!--
+            <li class="active">
+                <a href="traversing.html">traversing *</a>
+            </li>
+                -->
+                        <li class="">
+                            <a href="./opgave.html">5. Opgave</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subhead
+================================================== -->
+    <header class="jumbotron subhead" id="overview">
+        <div class="container">
+            <h1 id="title-name">Kom godt i gang med</h1>
+            <div id="logo">
+                <img id="logo-item1" src="assets/doc/billeder/logo/jquery.png" />
+                <img id="logo-item2" src="assets/doc/billeder/logo/vldm.png" />
+                <div id="logo-item3">
+                    <img src="assets/doc/billeder/logo/icon1.png" />
+                    <img src="assets/doc/billeder/logo/icon2.png" />
+                    <img src="assets/doc/billeder/logo/icon3.png" />
+                </div>
+            </div>
+
+
+
+        </div>
+    </header>
+
+
+    <div class="container">
+
+        <!-- Docs nav
+    ================================================== -->
+        <div class="row">
+            <div class="span3 bs-docs-sidebar">
+                <ul class="nav nav-list bs-docs-sidenav">
+                    <!--    <li class="active"><a href="#indledning"><i class="icon-chevron-right"></i>Indledning</a></li>
+          <li><a href="#file-structure"><i class="icon-chevron-right"></i> File structure</a></li>
+          <li><a href="#contents"><i class="icon-chevron-right"></i> What's included</a></li>
+          <li><a href="#html-template"><i class="icon-chevron-right"></i> HTML template</a></li>
+          <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
+          <li><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li>-->
+                </ul>
+            </div>
+            <div class="span9">
+
+
+
+
+                <!-- Contents
+        ================================================== -->
+                <section id="indledning">
+                    <div class="page-header">
+                        <h1>Indledning</h1>
+                    </div>
+                    <p class="lead">
+                        Du skal nu i gang med at arbejde med jQuery.
+                  Du vil komme rundt om den generelle brug af jQuery, 
+                  hvordan man koder et galleri og hvordan man bruger biblioteker til jQuery  
+                    </p>
+
+                    <h2>Hvad er jQuery</h2>
+                    <h4>Kort sagt: jQuery er et bibliotek.</h4>
+                    <p>
+                        jQuery er et bibliotek som sørger for at det bliver lettere og hurtigere at skrive kode i JavaScript.
+                        Du kan også tænke det som et ekstra lag oven på javascript, som udfører en masse opgaver med meget få kode linier.
+                    </p>
+                    <p class="text-center text-info">  
+                        <img src="assets/doc/billeder/drillNewAndOld.jpg" />
+                        <br /> 
+                        Det er det samme bare smartere og en del hurtigere, 
+                        <br />
+                        som en gammel skrue-maskine skiftet ud med en moderne skruemaskine.
+                        
+                    </p>
+                    <p>
+                        Nå nu jQuery er et javascript bibliotek, 
+                        er der ingen forskel på om det ene kan mere en det andet. 
+                        Den enste forskel er hvordan man skal skrive sin kode. 
+                        <span class="myTooltip label label-info" data-placement="top" style="display: none" title="vanila som i ingen extra bibloteker">vanila javascript</span>
+                         
+                    </p>
+                    
+                   <div class="row">
+                       <div class="span4">
+                           <h4>Javascript</h4>
+                           <pre class="prettyprint linenums">
+document.getElementById("divId")
+</pre>
+                       
+                       </div>
+                       <div class="span1 "></div>
+                       <div class="span4">
+                           <h4>jQuery</h4>
+                           <pre class="prettyprint linenums">
+$("#divId")
+</pre>
+                           <p class="text-info"><small>Det kan være det ikke giver så meget mening denne lille bid kode.
+                               
+                              Men bare rolig vi kommer tilbage til jQuery syntaks på et andet tidspunkt</small></p>
+                       </div>
+                    </div>
+                   
+                    <h4>Cross browser</h4>
+                    <p> <img style="float: right" src="assets/doc/billeder/browser.jpg" />
+                        Dette bibliotek virker også på alle af de større browsere, det er noget af det der gør jQuery så attraktivt, 
+                  det vil så sige at der er en måde at skrive sin kode på, 
+                  uden at skulle tage hensyn til mange af de andre browsere der findes derude. 
+                  Faktisk er der lavet test på hvor mange websider der har installeret jQuery, 
+                        og den har vist at halvdelen af hele verdens websider har installeret jQuery. 
+                  Så man kan godt sige at jQuery er meget populært blandt udviklere.  
+                  Når der nu bliver sagt at biblioteket virker på alle de mest brugte browsere, 
+                  og så lidt mere til. Gælder det også mange gamle visoner af browsere, dette er også gældende helt tilbage til Internet Explore 6, 
+                        men det kommer også an på hvilken verson af jQuery man bruger. Nu er det jo at 
+                        <a href="http://www.ie6countdown.com/" target="_blank" title="ie6countdown">Internet Explore 6 er erklæret død</a>, 
+                        og det er en utrolig god ting. IE6 har været med til at holde internet teknologien tilbage i meget lang tid.
+                    </p>
+             
+
+                </section>
+
+                <!-- Contents
+        ================================================== -->
+                <!--<section id="historie">
+                    <div class="page-header">
+                        <h1>Lidt historie</h1>
+                    </div>
+                    <p class="lead"></p>
+                    <h2>Hvor kommer jQuery fra</h2>
+                    <p>
+                        <span class="TODO">: historie - skriv mere</span>Før jQuery kom til brugte mange udviklere vanilla JavaScript, 
+                  hvor standarten kommer fra <a href="https://en.wikipedia.org/wiki/ECMAScript" title="wikipedia: ECMAScript" target="_blank">ECMAScript</a>. 
+                    </p>
+                </section>
+                    -->
+
+
+                <!--  <section id="bruges-jQuery">
+                          <div class="page-header">
+                              <h1>3. Hvad bruges jQuery til</h1>
+                          </div>
+                          <p class="lead"></p>
+                          <h2>Lidt historie</h2>
+                          <p>
+                          </p>
+                      </section>-->
+
+                <section id="Hent-jQuery">
+                    <div class="page-header">
+                        <h1>Hent jQuery </h1>
+                    </div>
+                    <p>
+                        Du kan hente jQuery flere forskellige steder, 
+                           den mest almindelige er at downloade jQuery fra deres egen webside 
+                           og lave et 
+                           <code>&lt;script&gt;</code>
+                        tag som skal pege på javascript filen fx. <code>/js/jQuery.js</code>.
+                        
+                        
+                        <pre class="prettyprint linenums">
+    &lt;script type=&quot;text/javascript&quot; src=&quot;js/jQuery.js&quot;&gt;&lt;/script&gt;
+</pre>
+
+                    </p>
+
+                    <h3>Host selv jQuery</h3>
+                    <p>
+                        Du kan downloade jQuery fra <a target="_blank" href="http://jquery.com">http://jQuery.com</a>.
+                        Lige for nylig er der kommet en ny udgave af jQuery der hedder 2.x. 
+                        Dens målgruppe er de modernet browsere, den fylder også mindre og er en del hurtigere end den gamle version.
+                        Og så har vi 1.x, den virker godt til de gamle browsere.
+                        Når filen er hentet, er det så bare at plante filer inden i dit projekt så du kan lave en reference til filen fra din html side.
+                    </p>
+                    <h3>CDN: Content delivery network</h3>
+                    <p>
+                        En CDN er et sted hvor filer bliver hosted. 
+                        Du kan derved lave en reference til en fil på denne host og 
+                        dine besøgende på din webside vil så skulle hente filer fra denne host.
+                    </p>
+                    <p>
+                        Dette er utrolig smart da en browser kun kan modtage 6 - 8 filer fra hver host af gangen.
+                        Det vil sige hvis du sender, lad os sige 7 filer og browseren kun kan modtage 6, 
+                        vil browsernen skulle vente på den sidste fil. 
+                        Hvis den sidste fil findes på en anden host, vil den besøgende modtage alle filer på en gang.
+                        Dette gælder filer som <code>.html</code>, <code>.css</code>, <code>.js</code> og <code>jpg, png, gif</code>
+                    </p>
+                    <p>
+                        En anden lille godbid er når den besøgende skal hente en fil du ønsker skal bruges, så henter den besøgende den tætteste fil som denne cdn 
+                        sender.
+                    </p>
+                    <p>
+                        Her er et kort fra cdnjs.com. dette kort viser os hvor en besøgende vil hente en fil fra hvis du brugte cdnjs.com´s CDN, lad os sige en fra 
+                        Matamata, New Zealand vil besøge din website, så vil han eller hun modtage filen fra Sydney, Australien, istedet for at skal modtage filen fra Danmark.
+                    </p>
+                    <img src="https://www.cloudflare.com/media/images/network-map.jpg" width="600" />
+
+                    <h2>CDN´s på nettet</h2>
+                        <p>Her er nogle referencer på nogle forskellige CDN hostes, bare husk på at jQuery kommer ud med nye versioner ret tit, datoen for disse referencer er juli 2013</p>
+                    <p>Der er en del forskel på den gamle (1.x) og nye (2.x) af jQuery, der kan være nogen plugins eller biblioteker som skal bruge en bestemt slags.</p>
+                    <h4><a  target="_blank" href="http://code.jquery.com/">jQuery CDN</a></h4>
+                    
+                    <p>
+                        Se nyeste verson på <a  target="_blank"href="http://code.jquery.com/">http://code.jquery.com</a>.
+                    </p>
+                    <pre class="prettyprint linenums">
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://code.jquery.com/jquery-1.10.0.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://code.jquery.com/jquery-2.0.2.min.js&quot;&gt;&lt;/script&gt;
+</pre>
+                    <h4><a  target="_blank"href="http://www.asp.net/ajaxlibrary/cdn.ashx#jQuery_Releases_on_the_CDN_0">Microsoft Ajax Content Delivery Network</a></h4>
+                    <p>
+                        Se nyeste verson på <a  target="_blank"href="http://www.asp.net/ajaxlibrary/cdn.ashx#jQuery_Releases_on_the_CDN_0">http://www.asp.net/ajaxlibrary/cdn.ashx#jQuery_Releases_on_the_CDN_0</a>.
+                    </p>
+                    <pre class="prettyprint linenums">
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.min.js&quot;&gt;&lt;/script&gt;
+</pre>
+                    <h4><a  target="_blank"href="https://developers.google.com/speed/libraries/devguide#jquery">Google Hosted Libraries</a></h4>
+                    <p>
+                        Se nyeste verson på <a  target="_blank"href="https://developers.google.com/speed/libraries/devguide#jquery">https://developers.google.com/speed/libraries/devguide#jquery</a>.
+                    </p>
+                    <pre class="prettyprint linenums">
+&lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+</pre>
+                    <h4><a  target="_blank"href="http://cdnjs.com/#jquery">cdnjs.com</a></h4>
+                    <p>
+                        Se nyeste verson på <a  target="_blank"href="http://cdnjs.com/#jquery">http://cdnjs.com/#jquery</a>.
+                    </p>
+                    <pre class="prettyprint linenums">
+&lt;script type=&quot;text/javascript&quot; src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.js&quot;&gt;&lt;/script&gt;
+</pre>
+
+
+
+                </section>
+
+                <div class="alert alert-block alert-info">
+                    <h4>fallback fra CDN til lokalt jQuery</h4>
+                    <p>Hvis CDN fejler kan du altid loade filer fra din egen host</p>
+                    <pre class="prettyprint linenums">
+&lt;script src=&quot;http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+ //&lt;![CDATA[
+  (window.jQuery) || document.write(&#39;&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-2.0.2.min.js&quot;&gt;&lt;\/script&gt;&#39;);
+ //]]&gt;
+&lt;/script&gt;   
+</pre>
+                    <p>Læs mere på <a  target="_blank"href="http://www.hanselman.com/blog/CDNsFailButYourScriptsDontHaveToFallbackFromCDNToLocalJQuery.aspx" target="_blank">
+                        <label class="label label-inverse">hanselman.com/.../FallbackFromCDNToLocalJQuery</label></a></p>
+                </div>
+
+                 <a class="toTop btn btn-info ">Gå til næste side <i class="icon-forward icon-white"></i> </a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <p>Code licensed under <a  target="_blank"href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a  target="_blank"href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+            <p><a  target="_blank"href="http://glyphicons.com">Glyphicons Free</a> licensed under <a  target="_blank"href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        </div>
+    </footer>
+
+    <div>
+        <a href="#myModal" role="button" class="btn" data-toggle="modal">TODO`S</a>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">TODO´S</h3>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+           
+        </div>
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/application.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script type="text/javascript">
+        tl.staggerFrom("#title-name span", 0.8, { left: 200, ease: Back.easeOut }, 0.06)
+            .from("#logo-item1", 0.8, { left: 200, autoAlpha: 0 }, "-=1.5")
+            .staggerFrom("#logo-item3 img", 0.5, { left: 200, top: -200, autoAlpha: 0, ease: Power1.easeOut }, 0.2, "-=0.3");
+        
+        
+    </script>
+</body>
+</html>

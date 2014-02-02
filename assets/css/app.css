@@ -1,0 +1,41 @@
+﻿.TODO
+{
+    display: none;
+}
+
+body > .navbar
+{
+    font-size: 23px;
+    line-height: 29px;
+}
+
+#logo
+{
+    position: relative;
+    height: 286px;
+}
+
+    #logo *
+    {
+        position: absolute;
+    }
+
+#title-name
+{
+    height: 62px;
+}
+
+    #title-name span
+    {
+        position: relative;
+    }
+
+.codePinLineNr {
+    background-image: url(/Rts.JavaScript.jQuery.kompendie.git/assets/doc/codepinfixlinenr.fw.png);
+    padding-left: 24px;
+    background-repeat: no-repeat;
+}
+pre .highlight {
+    background-color: #666565;
+    border-color: #eed3d7;
+}

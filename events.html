@@ -1,0 +1,356 @@
+﻿<!--
+        ?  click addClass gør klar til menuActive opgave
+                     removeClass()
+                     addClass()
+     -->
+<!--
+    opgave galleri hvad der er
+                first()
+                next()
+                find()
+                each()
+                is()
+                clone()
+                show()
+                fadeOut()
+                appendTo()
+                text()
+                css()
+                prev()
+                last()
+
+            traversing opgave/side
+                first()
+                next()
+                find()
+                prev()
+                last()
+                ? each()
+
+            manipulation
+                1. opgave/side/afsnit
+                        - en simpel opgave der hvordan jquery kan lave om på hvert element uden at bruge en each.
+                2. opgave/side/afsnit
+                        - en opgave der viser hvordan man arbejder med jquery.
+                        a.
+                            each()
+                            appendTo()
+                        b. - vis ikke alle elm med css. en variabel med tal som teller op. each på elm og add tal op i fadeIn. de fader ind, en efter en.
+                            - http://codepen.io/jhCMK/pen/DrqFf
+                            each()
+                            fadeIn()
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Johan Hallager / JH">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link href="assets/css/app.css" rel="stylesheet">
+    <style>
+        table tbody tr td:first-child {
+            min-width: 150px;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div id="menu" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="brand" href="./index.html">Bootstrap</a>-->
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="">
+                            <a href="./index.html">1. Indledning</a>
+                        </li>
+                        <li class="">
+                            <a href="./start.html">2. Start</a>
+                        </li>
+                        <li class="active">
+                            <a href="./events.html">3. Evenst</a>
+                        </li>
+                        <li class="">
+                            <a href="./method.html">4. Metoder</a>
+                        </li>
+                        <!--
+            <li class="active">
+                <a href="traversing.html">traversing *</a>
+            </li>
+                -->
+                        <li class="">
+                            <a href="./opgave.html">5. Opgave</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subhead
+    ================================================== -->
+    <header class="jumbotron subhead" id="overview">
+        <div class="container">
+            <h1 id="title-name">Events</h1>
+        </div>
+    </header>
+
+
+    <div class="container">
+
+        <!-- Docs nav
+        ================================================== -->
+        <div class="row">
+            <div class="span3 bs-docs-sidebar">
+                <ul class="nav nav-list bs-docs-sidenav">
+                    <!--    <li class="active"><a href="#indledning"><i class="icon-chevron-right"></i>Indledning</a></li>
+                    <li><a href="#file-structure"><i class="icon-chevron-right"></i> File structure</a></li>
+                    <li><a href="#contents"><i class="icon-chevron-right"></i> What's included</a></li>
+                    <li><a href="#html-template"><i class="icon-chevron-right"></i> HTML template</a></li>
+                    <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
+                    <li><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li>-->
+                </ul>
+            </div>
+            <div class="span9">
+
+
+
+                <section id="Events">
+                    <div class="page-header">
+                        <h1>Events</h1>
+                        <p class="lead">
+                            Et event er en handling registreret af programmet.
+                        </p>
+                    </div>
+                    <p>
+                        Der skal ses på events og hvad der kan gøres med dem. Et event kan vente på at brugeren gør noget,
+                        det kan eksempelvis være hvis der sker et klik med musen eller hvis der bliver tastet på tastaturet.
+                    </p>
+                    <p>
+                        Der kan også udføres events uden at brugeren her gjort noget udover at brugeren er på siden. I disse tilfælde kan det være en animation.
+                    </p>
+                </section>
+
+                <section id="Eventeds-opbygning">
+                    <div class="page-header">
+                        <h1>Eventeds opbygning</h1>
+                        <p class="lead">hvordan ser et event egentlig ud?.</p>
+                    </div>
+                    <p>Et event ligner meget det der er arbejdet med før, Der er en Selector, metode og argumenter</p>
+                    <p>Argumenterne er nu udvidet og der kommer en funktion ind i billedet, det er markeret i rød.</p>
+                    <div class="row">
+                        <div class=" span8 well">
+                            <div class="offset2">
+                                <h3 class="">
+                                    <span class="text-warning">$</span><span class="text-success">(selector)</span><span class="text-info">.metode(</span><span class="text-error">function(){</span><br />
+                                    &emsp;&emsp;<span>argumenter</span>
+                                    <br />
+                                    <span class="text-error">}</span><span class="text-info">)</span>
+                                </h3>
+                            </div>
+                            <dl class="dl-horizontal">
+                                <dt class="text-info">.metode()</dt>
+                                <dd>Hvilken metode skal udføres.</dd>
+                                <dt class="text-error">function</dt>
+                                <dd>
+                                    Hvis metoden kan modtage funktionen så vil den sende koden med, ligesom med argumenter.
+                                    Det er tit det sker at der skal sendes mere en bare en funktion eller argument med.
+                                    <code> $(selector).metode("argument", function(){  })</code>
+                                </dd>
+                                <dt>argument</dt>
+                                <dd>Her vil du placere kode logikken som skal udføre en bestemt funktion.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </section>
+                <section id="Ready_event">
+                    <div class="page-header">
+                        <h1>Ready event</h1>
+                    </div>
+                    <p>
+                        Et vigtig event er ready eventet og minder meget om window.onload. Men de arbejder ikke på samme måde.
+                        Ready eventet er hurtigere fordi den ikke venter på noget af det som <code>window.onload</code> gør. Det kan eksempelvis være billeder.
+                    </p>
+                    <div class="row">
+                        <div class="span4">
+                            <h4>JavaScript</h4>
+                            <pre class="prettyprint linenums">window.onload = function () {
+         //...
+}</pre>
+                        </div>
+                        <div class="span4">
+                            <h4>jQuery</h4>
+                            <pre class="prettyprint linenums">$(document).ready(function () {
+          //...
+});</pre>
+                        </div>
+
+                        <div class="span4 offset4">
+                            <h4>jQuery ready forkortelse</h4>
+                            <pre class="prettyprint linenums">$(function () {
+          //...
+});</pre>
+                            <p>Du kan se at der ikke er lige så meget kode ved denne her og er derfor også hurtigst at skrive.</p>
+                        </div>
+                    </div>
+                    <p>
+                        <strong> Hvor er det så godt at bruge en Ready?</strong> Det er det hvis du placerer din jQuery kode oppe i <code>&lt;head&gt;&lt;/head&gt;</code>.
+                        Ligesom det er beskrevet i Javascript Kompendiet under <a target="_blank" href="http://jhrts.github.io/javascript/dom.html#Webside-livscyklus">Webside livscyklus</a>, så kan javascript ikke se html kode hvis ikke den findes.
+                    </p>
+
+                </section>
+                <section id="Mouse-event">
+                    <div class="page-header">
+                        <h1>Mouse event</h1>
+                    </div>
+                    <p>
+                        Et mouse event som reagerer på at brugeren klikker på en knap, kan se således ud.
+                    </p>
+
+                    <pre class="prettyprint linenums">$("button").on("click", function(){
+    //...
+})</pre>
+                    <p>Så nu mangler der bare at blivet udført et eller andet efter brugeren har trykket.</p>
+                    <strong>Øvelse del.1.</strong>
+                    <p>1. I denne <a href="http://codepen.io/jhCMK/pen/meJzh">CodePin</a> skal du skifte teksten ud inden i diven ved at klikke på knappen. Se  <a href="start.html#Metoder">start</a> hvordan man skifter tekst ud.</p>
+                    <!--CODEPIN-->
+                    <div data-height="136" data-theme-id="0" data-slug-hash="meJzh" data-default-tab="js" class='codepen'>
+                        <pre><code>$(&quot;button&quot;).on(&quot;click&quot;, function(){
+    &#x2F;&#x2F; skriv kode her...
+})</code></pre>
+                        <p>See the Pen <a href='http://codepen.io/jhCMK/pen/meJzh'>Mouse event Øvelse del.1</a> by Johan Plesner Hallager (<a href='http://codepen.io/jhCMK'>@jhCMK</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+                    </div>
+                    <!--CODEPIN END-->
+
+                    <p>2. Lad os se på en anden metode som kan få teksten til at blive langsomt tydeligere.</p>
+                    <p>Skriv først denne css. Diven må ikke være synlig til at starte med.</p>
+                    <pre class="prettyprint linenums">div{
+  display: none;
+}</pre>
+                    <p>Derefter skal du skrive <code>.fadeIn()</code> lige efter <code>.html()</code></p>
+                    <p>Koden kunne se således ud.</p>
+                    <pre class="prettyprint">$("div").html("hej med dig").fadeIn();</pre>
+                    <p>Du vil kunne se at teksten langsomt bliver vist, denne type af events hedder Effects og kan findes i jQuerys API <a href="http://api.jquery.com/category/effects/">her</a>.</p>
+                    <p>3. Her er et par stykker du kan skifte ud med <code>.fadeIn()</code> prøve at skrive en af disse <code>.slideDown()</code> og <code>.show()</code>.</p>
+
+                    <strong>Øvelse del.2.</strong>
+                    <p>Du skal nu arbejde med to knapper, den ene skal vise indhold og den anden skal skjule indhold. Der skal til denne øvelse laves to klik events, en til hver knap.</p>
+                    <p>
+                        Igen får du en <a href="http://codepen.io/jhCMK/pen/LkAsv">CodePen</a> du skal arbejde i. <br />
+                        I den mangler der lidt jQuery kode, du få koden der viser indhold men ikke den der skjuler indhold, den skal du selv skrive.
+                    </p>
+                    <!--CODEPIN -->
+                    <div data-height="190" data-theme-id="0" data-slug-hash="LkAsv" data-default-tab="js" class='codepen'>
+                        <pre><code>$(&quot;#vis&quot;).on(&quot;click&quot;, function(){
+  $(&quot;div&quot;).fadeIn();
+})
+&#x2F;&#x2F; lav et klik event der skjuler indholdet igen.
+</code></pre>
+                        <p>See the Pen <a href='http://codepen.io/jhCMK/pen/LkAsv'>Mouse event Øvelse Del.2</a> by Johan Plesner Hallager (<a href='http://codepen.io/jhCMK'>@jhCMK</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+                    </div>
+                    <!--CODEPIN END-->
+                 
+
+                </section>
+
+
+
+                <a class="toTop btn btn-info ">Gå til næste side <i class="icon-forward icon-white"></i></a>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+            <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        </div>
+    </footer>
+
+    <div>
+        <!--  <a href="#myModal" role="button" class="btn" data-toggle="modal">TODO`S</a>
+
+
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">TODO´S</h3>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>-->
+
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script async src="http://codepen.io/assets/embed/ei.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/application.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script type="text/javascript">
+        tl.staggerFrom("#title-name span", 0.8, { left: 200, ease: Back.easeOut }, 0.06, "go").to("#logo", 0.8, { width: "50%", height: "50%", top: -50, left: "50%", ease: Back.easeOut }, "go+=0.35")
+        //.to(".subhead", 0.8, { height: 168 }, "-=0.3")
+        ;
+
+    </script>
+</body>
+</html>

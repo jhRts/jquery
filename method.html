@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Johan Hallager / JH">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link href="assets/css/app.css" rel="stylesheet">
+    <style>
+        table tbody tr td:first-child {
+            min-width: 150px;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div id="menu" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="brand" href="./index.html">Bootstrap</a>-->
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="">
+                            <a href="./index.html">1. Indledning</a>
+                        </li>
+                        <li class="">
+                            <a href="./start.html">2. Start</a>
+                        </li>
+                        <li class="">
+                            <a href="./events.html">3. Evenst</a>
+                        </li>
+                        <li class="active">
+                            <a href="./method.html">4. Metoder</a>
+                        </li>
+                        <!--
+            <li class="active">
+                <a href="traversing.html">traversing *</a>
+            </li>
+                -->
+                        <li class="">
+                            <a href="./opgave.html">5. Opgave</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subhead
+    ================================================== -->
+    <header class="jumbotron subhead" id="overview">
+        <div class="container">
+            <h1 id="title-name">Metoder</h1>
+        </div>
+    </header>
+
+
+    <div class="container">
+
+        <!-- Docs nav
+        ================================================== -->
+        <div class="row">
+            <div class="span3 bs-docs-sidebar">
+                <ul class="nav nav-list bs-docs-sidenav">
+                    <!--    <li class="active"><a href="#indledning"><i class="icon-chevron-right"></i>Indledning</a></li>
+                    <li><a href="#file-structure"><i class="icon-chevron-right"></i> File structure</a></li>
+                    <li><a href="#contents"><i class="icon-chevron-right"></i> What's included</a></li>
+                    <li><a href="#html-template"><i class="icon-chevron-right"></i> HTML template</a></li>
+                    <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
+                    <li><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li>-->
+                </ul>
+            </div>
+            <div class="span9">
+
+
+                <section id="Metoder">
+                    <div class="page-header">
+                        <h1>Metoder</h1>
+                        <p class="lead">
+                            Der skal ses lidt på nogle forskellige metoder i jQuery. Der er mange smarte metode indbygget i jQuery og
+                            vi skal se på nogle enkle her, derefter bliver du introduceret til nogle flere efterhånden.
+                            Du kan også besøge <a href="http://api.jquery.com">jQuery´s API dokumentation</a>
+                        </p>
+                    </div>
+                    <p class="lead">Først et overblik</p>
+                    <p>
+                        Der er flere måder at arbejde med metoder på, en af metoderne er at man kan hente en værdi og du kan give en værdi.
+                    </p>
+                    <div class="row">
+                        <div class="span4 well">
+                            <strong>Hent indhold</strong>
+                            <pre class="prettyprint ">$("#myDiv").html()</pre>
+                        </div>
+                        <div class="span4 well">
+                            <strong>Giv indhold</strong>
+                            <pre class="prettyprint ">$("#myDiv").html("Nyt indhold")</pre>
+                        </div>
+                    </div>
+                    <p>Fx. kan man hente indhold fra et HTML tag, og smide indholdet ind i et andet tag</p>
+                    <strong>HTML</strong>
+                    <pre class="prettyprint linenums">
+&lt;div id=&quot;myDiv&quot;&gt; Lorem ipsum &lt;span&gt;dolor&lt;/span&gt; sit &lt;/div&gt;
+&lt;div id=&quot;andenDiv&quot;&gt;&lt;/div&gt;
+</pre>
+                    <strong>jQuery</strong>
+                    <pre class="prettyprint linenums">
+var myDiv = $("#myDiv").html(); // henter indhold
+$("#andenDiv").html( myDiv );   // indsætter indhold
+</pre>
+                    <strong>Resultat</strong>
+                    <pre class="prettyprint linenums">
+&lt;div id=&quot;myDiv&quot;&gt; Lorem ipsum &lt;span&gt;dolor&lt;/span&gt; sit &lt;/div&gt;
+&lt;div id=&quot;andenDiv&quot;&gt; Lorem ipsum &lt;span&gt;dolor&lt;/span&gt; sit &lt;/div&gt;
+</pre>
+                    <p>Open <a target="_blank" href="http://codepen.io/jhCMK/pen/ykvEb">CodePin</a>.</p>
+                    <p>
+                        Du kan så også ændre på css af et element. Prøv at skrive denne kode i CodePin´en.
+                    </p>
+                    <pre class="prettyprint">$("#andenDiv").css("background-color","red");</pre>
+                    <p>Du vil kunne se at #andenDiv har fået en background-color.</p>
+                    <p>Hvis du så ser på koden i browseren´s web developer tool. Vil du så kunne se denne kode. Læg mærke til at der bliver sat en style på elementet.</p>
+                    <pre class="prettyprint">&lt;div id=&quot;andenDiv&quot; style=&quot;background-color: red;&quot;&gt; Lorem ipsum &lt;span&gt;dolor&lt;/span&gt; sit &lt;/div&gt;</pre>
+                    <p>En anden måde at ændre på et element er at give elementet en class, det kan du gøre ved at skrive denne kode.</p>
+                    <pre class="prettyprint">$("#andenDiv").addClass("nyClass");</pre>
+                    <p>Elementet får nu en ny class og du kan se at den ser meget anderledes ud.</p>
+                    <p>Som du kan se, så skal der ikke gøres særlig meget for at lave lidt småting med nogle få elementer. Men skal vi så se på noget mere spændende såsom Events.</p>
+
+                </section>
+
+                <section id="Sammenkædning-metoder">
+                    <div class="page-header">
+                        <h1>Sammenkædning af metoder</h1>
+                    </div>
+                    <p>
+                        Jquery har en smart egenskab og det kaldes method chaining.
+                        Det vil sige at du kan sammenkæde flere metoder af gangen,
+                        så behøves du kun at vælge et element og skrive alt hvad den skal ud i en køre.
+                    </p>
+
+                    <h4>Uden chaining</h4>
+                    <pre class="prettyprint linenums">$("div").text("Hello, world!");
+$("div").removeClass("blue");
+$("div").addClass("bold");
+$("div").css("color", "blue");   
+</pre>
+
+                    <h4>Med chaining</h4>
+                    <pre class="prettyprint linenums">  $("div").text("Hello, world!")
+                .removeClass("blue")
+                .addClass("bold")
+                .css("color", "blue");    
+</pre>
+
+                    <strong>Opgave</strong>
+                    <p>Prøv noget af det samme på denne <a href="http://codepen.io/jhCMK/pen/rqfga">CodePen</a> som vist.</p>
+                    <!-- codepen -->
+                    <p data-height="268" data-theme-id="0" data-slug-hash="rqfga" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/jhCMK/pen/rqfga'>Sammenkædning af metoder</a> by Johan Plesner Hallager (<a href='http://codepen.io/jhCMK'>@jhCMK</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+                    <!-- end codepen -->
+
+                </section>
+
+                <section id="Each-metode">
+                    <div class="page-header">
+                        <h1>Each metode *</h1>
+                    </div>
+                    <p>Each bliver brugt når opgaven ikke kan løses med <i>method chaining</i>.</p>
+                    <p>
+                        Det vil sige, hvis der skal udføres flere metoder på et element, så kan det være en god ide at bruge <code>.each()</code>.
+                        Med en <code>.each()</code> kan man gennemgå flere elementer som skal manipuleres med.
+                        Det kan være at hvert element skal have tilføjet noget ekstra HTML kode,
+                        eller hvis der skal laves en beregning af en art, dette vil du komme til at se i de følgende opgaver.
+                    </p>
+                    <p>
+                        Forneden kan du se hvordan en <code>.each()</code> kan se ud.
+                    </p>
+                    <pre class="prettyprint linenums">$("a").each(function(){
+     //.. 
+});
+</pre>
+                    <p>Her er et eksempel på hvornår man ikke behøver en each, da man opnår det samme resultat.</p>
+                    <div class="row">
+                        <div class="span4">
+                            <pre class="linenums prettyprint">$("&lt;span&gt; i chaining&lt;/span&gt;")
+        .appendTo("#chaining p");</pre>
+                            <p>Da jQuery i sig selv behandler hvert element, er der ikke brug for en .each() i dette tilfælde.</p>
+                            <p>Du kan afprøve koden <a href="http://codepen.io/jhCMK/pen/teEpH">her (codepen)</a>.</p>
+                        </div>
+                        <div class="span4">
+                            <pre class="linenums prettyprint">$("#each p").each(function(){
+ $("&lt;span&gt; i each&lt;/span&gt;")
+        .appendTo(this);
+}) </pre>
+                        </div>
+
+                    </div>
+                    <p>
+                        I dette stykke kode kan du se hvornår det kunne være nødvendigt at arbejde med en <code>.each()</code>.
+                    </p>
+                    <!-- CodePen -->
+                    <p data-height="300" data-theme-id="0" data-slug-hash="ufCkh" data-default-tab="js" class='codepen'>See the Pen <a href='http://codepen.io/jhCMK/pen/ufCkh'>ufCkh</a> by Johan Plesner Hallager (<a href='http://codepen.io/jhCMK'>@jhCMK</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+                    <!-- end CodePen -->
+                    <p>
+                        Hvert maleri bliver kørt igennem en løkke (each), hvor der derefter bliver testet om et maleri har en class udsolgt.
+                    </p>
+                    <pre class="prettyprint">&lt;div class=&quot;maleri udsolgt&quot;&gt;</pre>
+                    <p>
+                        Hvis der er et maleri der har classen skal der være en span med teksten udsolgt, istedet for en button med teksten Køb.
+                    </p>
+                    <pre class="prettyprint linenums">  if(<span class="highlight"> $(this).hasClass("udsolgt")</span>){
+    $("&lt;span&gt;udsolgt&lt;/span&gt;").appendTo(this);
+  }else{
+    $("&lt;button&gt;K&#248;b&lt;/button&gt;").appendTo(this);
+  }</pre>
+                </section>
+
+
+                <!-- en jquery animate?? -->
+
+
+                <a class="toTop btn btn-info ">Gå til næste side <i class="icon-forward icon-white"></i></a>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+            <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        </div>
+    </footer>
+
+    <div>
+        <!--  <a href="#myModal" role="button" class="btn" data-toggle="modal">TODO`S</a>
+
+
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">TODO´S</h3>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>-->
+
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script async src="http://codepen.io/assets/embed/ei.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/application.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script type="text/javascript">
+        tl.staggerFrom("#title-name span", 0.8, { left: 200, ease: Back.easeOut }, 0.06, "go").to("#logo", 0.8, { width: "50%", height: "50%", top: -50, left: "50%", ease: Back.easeOut }, "go+=0.35")
+        //.to(".subhead", 0.8, { height: 168 }, "-=0.3")
+        ;
+
+    </script>
+</body>
+</html>
